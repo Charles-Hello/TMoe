@@ -63,7 +63,10 @@ class SettingsFragment : BaseHierarchyFragment() {
                 }
             )
             functionSwitch(
-                HistoricalNewsOption, "HistoricalNewsOption", R.string.HistoricalNewsOption
+                HistoricalNewsOption, "HistoricalNewsOption", R.string.HistoricalNewsOption,
+                descProvider = {
+                    LocaleController.getString("HistoricalNewsOptionDesc", R.string.HistoricalNewsOptionDesc)
+                }
             )
             functionSwitch(
                 ProhibitChannelSwitching, "ProhibitChannelSwitching", R.string.ProhibitChannelSwitching
@@ -102,6 +105,9 @@ class SettingsFragment : BaseHierarchyFragment() {
                 SendCommand, "SendCommand", R.string.SendCommand
             )
             functionSwitch(
+                DisableInstantCamera, "DisableInstantCamera", R.string.DisableInstantCamera
+            )
+            functionSwitch(
                 ForceBlurChatAvailable, "ForceBlurChatAvailable", R.string.ForceBlurChatAvailable
             )
             functionSwitch(
@@ -117,6 +123,17 @@ class SettingsFragment : BaseHierarchyFragment() {
             functionSwitch(
                 HidePremiumStickerSetTab, "HidePremiumStickerSetTab", R.string.HidePremiumStickerSetTab,
                 "HidePremiumStickerSetTabDesc", R.string.HidePremiumStickerSetTabDesc
+            )
+            functionSwitch(
+                ShowExactLastSeenTime, "ShowExactLastSeenTime", R.string.ShowExactLastSeenTime,
+                "ShowExactLastSeenTimeDesc", R.string.ShowExactLastSeenTimeDesc
+            )
+            functionSwitch(
+                HideServiceStories, "HideServiceStories", R.string.HideServiceStories
+            )
+            functionSwitch(
+                ShowIdInProfile, "ShowIdInProfile", R.string.ShowIdInProfile,
+                "ShowIdInProfileDesc", R.string.ShowIdInProfileDesc
             )
         }
         category("LostMsgMitigation", R.string.LostMsgMitigation) {
@@ -149,6 +166,11 @@ class SettingsFragment : BaseHierarchyFragment() {
                 HistoricGroupMemberRecord,
                 "HistoricGroupMemberRecord", R.string.HistoricGroupMemberRecord,
                 "HistoricGroupMemberRecordDesc", R.string.HistoricGroupMemberRecordDesc
+            )
+            functionSwitch(
+                LocalGroupMemberList,
+                "LocalGroupMemberList", R.string.LocalGroupMemberList,
+                "LocalGroupMemberListDesc", R.string.LocalGroupMemberListDesc
             )
         }
         category("DebugAndLogsForClient", R.string.DebugAndLogsForClient) {
